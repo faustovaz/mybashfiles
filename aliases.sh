@@ -1,2 +1,3 @@
 alias gs='git status -sb'
 alias gl='git pull --rebase'
+alias home="cd ~"
