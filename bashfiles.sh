@@ -1,4 +1,4 @@
-source env.sh
-source git.sh
-source aliases.sh
-source prompt.sh
+source ~/.mybashfiles/env.sh
+source ~/.mybashfiles/git.sh
+source ~/.mybashfiles/aliases.sh
+source ~/.mybashfiles/prompt.sh
