@@ -35,9 +35,9 @@ git_prompt(){
     local Color_Off='\e[0m'
     if [ "$(is_a_git_repo)" = "true" ]; then
         if [ "$(is_there_any_change)" = "true" ]; then
-            echo -e " [$BYellow $(git_branch) $Color_Off] $(need_to_push) "
+            echo -e "[$BYellow $(git_branch) $Color_Off]$(need_to_push) "
         else
-            echo -e " [$BGreen $(git_branch) $Color_Off] $(need_to_push) "
+            echo -e "[$BGreen $(git_branch) $Color_Off]$(need_to_push) "
         fi
     fi
 }
