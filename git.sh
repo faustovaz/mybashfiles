@@ -11,3 +11,25 @@ is_a_git_repo(){
         echo "false"
     fi
 }
+
+is_there_any_change(){
+    changes="$(git status -sb 2> /dev/null | wc -l)"
+    if [  "$changes" = "1" ]; then
+        echo "false"
+    else
+        echo "true"
+    fi
+}
+
+git_prompt(){
+    local BGreen='\e[1;32m'
+    local BYellow='\e[1;33m'
+    local Color_Off='\e[0m'
+    if [ "$(is_a_git_repo)" = "true" ]; then
+        if [ "$(is_there_any_change)" = "true" ]; then
+            echo -e " [$BYellow $(git_branch) $Color_Off] "
+        else
+            echo -e " [$BGreen $(git_branch) $Color_Off] "
+        fi
+    fi
+}
