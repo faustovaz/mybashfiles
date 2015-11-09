@@ -9,3 +9,24 @@ get_ibge_maps(){
       unzip  "$fileToDownload"
   done;
 }
+
+youtube_to_mp3(){
+  hash youtube-dl 2> /dev/null
+  if [ "$?" -eq 1 ]; then
+    echo "youtube_to_mp3: youtube-dl not found. Please install it!"
+    exit 1
+  fi
+  hash ffprobe 2> /dev/null
+  if [ "$?" -eq 1 ]; then
+    echo "youtube_to_mp3: ffprobe not found. Please Install it!"
+    echo "youtube_to_mp3: Install ffmpeg to get ffprobe"
+    exit 1
+    #To install ffmpeg: sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next
+    #apt-get install ffmpeg
+  fi
+  if [ -z "$1" ]; then
+    echo "youtube_to_mp3: Where is the youtube's url?"
+    exit 1
+  fi
+  youtube-dl -x --audio-quality 0 --audio-format mp3 $1
+}
