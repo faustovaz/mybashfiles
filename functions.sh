@@ -30,3 +30,18 @@ youtube_to_mp3(){
   fi
   youtube-dl -x --audio-quality 0 --audio-format mp3 $1
 }
+
+pyenv_update(){
+  local ACTUAL_PATH=$(pwd)
+  local PYENV_DIR
+  if [ -z $PYENV_ROOT ]; then
+    PYENV_DIR=$PYENV_ROOT
+  else
+    PYENV_DIR=$HOME/.pyenv
+  fi
+  cd $PYENV_ROOT
+  git pull --rebase
+  cd $PYENV_ROOT/plugins/pyenv-virtualenv
+  git pull --rebase
+  cd $ACTUAL_PATH
+}
