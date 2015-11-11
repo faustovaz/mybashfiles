@@ -34,7 +34,7 @@ youtube_to_mp3(){
 pyenv_update(){
   local ACTUAL_PATH=$(pwd)
   local PYENV_DIR
-  if [ -z $PYENV_ROOT ]; then
+  if [ -n "$PYENV_ROOT" ]; then
     PYENV_DIR=$PYENV_ROOT
   else
     PYENV_DIR=$HOME/.pyenv
