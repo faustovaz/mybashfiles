@@ -45,3 +45,18 @@ pyenv_update(){
   git pull --rebase
   cd $ACTUAL_PATH
 }
+
+rbenv_update(){
+  local ACTUAL_PATH=$(pwd)
+  local RBENV_DIR
+  if [ -n "$RBENV_ROOT" ]; then
+    RBENV_DIR=$RBENV_ROOT
+  else
+    RBENV_DIR=$HOME/.rbenv
+  fi
+  cd $RBENV_DIR
+  git pull --rebase
+  cd $RBENV_DIR/plugins/ruby-build
+  git pull --rebase
+  cd $ACTUAL_PATH
+}
