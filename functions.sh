@@ -60,3 +60,17 @@ rbenv_update(){
   git pull --rebase
   cd $ACTUAL_PATH
 }
+
+update_funcoeszz(){
+  local ACTUAL_PATH=$(pwd)
+  cd $HOME/.funcoeszz
+  local ACTIVE_BRANCH="$(git_branch)"
+  if [ "$ACTIVE_BRANCH" = "master" ]; then
+    git fetch upstream
+    git merge upstream/master
+    git push origin master
+  else
+    echo "Not in master branch"
+  fi
+  cd "$ACTUAL_PATH"
+}
