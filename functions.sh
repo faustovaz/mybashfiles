@@ -21,8 +21,9 @@ youtube_to_mp3(){
     echo "youtube_to_mp3: ffprobe not found. Please Install it!"
     echo "youtube_to_mp3: Install ffmpeg to get ffprobe"
     exit 1
-    #To install ffmpeg: sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next
-    #apt-get install ffmpeg
+    #To install ffmpeg:
+      #sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next
+      #apt-get install ffmpeg
   fi
   if [ -z "$1" ]; then
     echo "youtube_to_mp3: Where is the youtube's url?"
@@ -61,7 +62,7 @@ rbenv_update(){
   cd $ACTUAL_PATH
 }
 
-update_funcoeszz(){
+funcoeszz_update(){
   local ACTUAL_PATH=$(pwd)
   cd $HOME/.funcoeszz
   local ACTIVE_BRANCH="$(git_branch)"
