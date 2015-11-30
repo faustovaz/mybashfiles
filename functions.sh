@@ -20,10 +20,11 @@ youtube_to_mp3(){
   if [ "$?" -eq 1 ]; then
     echo "youtube_to_mp3: ffprobe not found. Please Install it!"
     echo "youtube_to_mp3: Install ffmpeg to get ffprobe"
+    echo "To install ffmpeg:
+          sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next
+          apt-get install ffmpeg"
     exit 1
-    #To install ffmpeg:
-      #sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next
-      #apt-get install ffmpeg
+    #
   fi
   if [ -z "$1" ]; then
     echo "youtube_to_mp3: Where is the youtube's url?"
