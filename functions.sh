@@ -76,3 +76,9 @@ funcoeszz_update(){
   fi
   cd "$ACTUAL_PATH"
 }
+
+atom_update(){
+  echo "Updating the best editor ever!!!"
+  wget -O latest_atom.deb -P /tmp/ https://atom.io/download/deb
+  sudo dpkg -i /tmp/latest_atom.deb
+}
