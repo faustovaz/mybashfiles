@@ -7,5 +7,5 @@ eval "$(rbenv init -)"
 
 # Instalacao das Funcoes ZZ (www.funcoeszz.net)
 export ZZOFF=""  # desligue funcoes indesejadas
-export ZZPATH="/home/faustovaz/.funcoeszz/funcoeszz"
+export ZZPATH="$HOME/.funcoeszz/funcoeszz"
 source "$ZZPATH"
