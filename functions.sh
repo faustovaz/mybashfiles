@@ -79,11 +79,11 @@ funcoeszz_update(){
 
 atom_update(){
   echo "Updating the best editor ever!!!"
-  wget -O latest_atom.deb -P /tmp/ https://atom.io/download/deb
+  wget -O /tmp/latest_atom.deb https://atom.io/download/deb
   sudo dpkg -i /tmp/latest_atom.deb
 }
 
 dbeaver_update(){
-  wget -O latest_dbeaver.deb -P /tmp/ http://dbeaver.jkiss.org/files/dbeaver-ce_latest_amd64.deb
+  wget -O /tmp/latest_dbeaver.deb http://dbeaver.jkiss.org/files/dbeaver-ce_latest_amd64.deb
   sudo dpkg -i /tmp/latest_dbeaver.deb
 }
