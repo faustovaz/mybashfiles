@@ -14,7 +14,7 @@ youtube_to_mp3(){
   hash youtube-dl 2> /dev/null
   if [ "$?" -eq 1 ]; then
     echo "youtube_to_mp3: youtube-dl not found. Please install it!"
-    exit 1
+    return
   fi
   hash ffprobe 2> /dev/null
   if [ "$?" -eq 1 ]; then
@@ -23,14 +23,14 @@ youtube_to_mp3(){
     echo "To install ffmpeg:
           sudo add-apt-repository ppa:kirillshkrogalev/ffmpeg-next
           apt-get install ffmpeg"
-    exit 1
+    return
     #
   fi
   if [ -z "$1" ]; then
     echo "youtube_to_mp3: Where is the youtube's url?"
-    exit 1
+    return
   fi
-  youtube-dl -x --audio-quality 0 --audio-format mp3 $1
+  youtube-dl -x --audio-quality 0 --audio-format mp3 "$1"
 }
 
 pyenv_update(){
