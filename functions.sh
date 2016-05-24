@@ -87,3 +87,9 @@ dbeaver_update(){
   wget -O /tmp/latest_dbeaver.deb http://dbeaver.jkiss.org/files/dbeaver-ce_latest_amd64.deb
   sudo dpkg -i /tmp/latest_dbeaver.deb
 }
+
+euro_hoje ()
+{
+  local dump=$(lynx -dump -nolist http://dolarhoje.com/euro/)
+  echo $dump
+}
