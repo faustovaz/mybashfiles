@@ -93,5 +93,5 @@ euro_hoje (){
 }
 
 libra_hoje(){
-  lynx -dump -nolist http://dolarhoje.com/libra/ | grep R\\$
+  lynx -dump -nolist http://dolarhoje.com/libra/ | grep R\\$ |  sed 's/_//g'
 }
