@@ -89,7 +89,7 @@ dbeaver_update(){
 }
 
 euro_hoje (){
-  lynx -dump -nolist http://dolarhoje.com/euro/ | grep R\\$
+  lynx -dump -nolist http://dolarhoje.com/euro/ | grep R\\$ | sed 's/_//g'
 }
 
 libra_hoje(){
