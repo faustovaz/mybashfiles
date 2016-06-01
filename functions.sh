@@ -72,7 +72,7 @@ funcoeszz_update(){
     git merge upstream/master
     git push origin master
   else
-    echo "Not in master branch"
+    echo "Not in branch master"
   fi
   cd "$ACTUAL_PATH"
 }
