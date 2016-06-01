@@ -88,7 +88,10 @@ dbeaver_update(){
   sudo dpkg -i /tmp/latest_dbeaver.deb
 }
 
-euro_hoje ()
-{
+euro_hoje (){
   lynx -dump -nolist http://dolarhoje.com/euro/ | grep R\\$
+}
+
+libra_hoje(){
+  lynx -dump -nolist http://dolarhoje.com/libra/ | grep R\\$
 }
