@@ -90,6 +90,5 @@ dbeaver_update(){
 
 euro_hoje ()
 {
-  local dump=$(lynx -dump -nolist http://dolarhoje.com/euro/)
-  echo $dump
+  lynx -dump -nolist http://dolarhoje.com/euro/ | grep R\\$
 }
