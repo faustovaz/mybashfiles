@@ -1,6 +1,6 @@
 alias gs='git status -sb'
 alias gl='git pull --rebase'
-alias gb='git checkout -b'
+alias gp='git push origin'
 alias home="cd ~"
 alias vaitimao="zzfutebol | grep Corinthians"
 alias timaonobrasileirao="zzbrasileirao | grep Corinthians"
