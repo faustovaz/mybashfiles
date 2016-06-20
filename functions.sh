@@ -95,3 +95,12 @@ euro_hoje (){
 libra_hoje(){
   lynx -dump -nolist http://dolarhoje.com/libra/ | grep R\\$ |  sed 's/_//g'
 }
+
+dolar_hoje(){
+  lynx -dump -nolist http://dolarhoje.com | grep R\\$ | sed 's/_//g'
+}
+
+dolar_no_paragua(){
+  dolar=$(lynx -dump -nolist http://comprasparaguai.com.br | grep R\\$ | sed 's/\$/\$ /g')
+  echo "Dolar no paragua hoje: $dolar"
+}
