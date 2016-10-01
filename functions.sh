@@ -104,3 +104,8 @@ dolar_no_paragua(){
   dolar=$(lynx -dump -nolist http://comprasparaguai.com.br | grep R\\$ | sed 's/\$/\$ /g')
   echo "Dolar no paragua hoje: $dolar"
 }
+
+install_pyenv(){
+  git clone https://github.com/yyuu/pyenv.git ~/.pyenv
+  git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
+}
