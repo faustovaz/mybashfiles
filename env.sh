@@ -1,4 +1,4 @@
-export JAVA_HOME=/opt/jdk1.8.0_60
+export JAVA_HOME=/opt/java
 export JRE_HOME=$JAVA_HOME/jre
 export ZZDIR=$HOME/.funcoeszz/zz
 export PYENV_ROOT=$HOME/.pyenv
